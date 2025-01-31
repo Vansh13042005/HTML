@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+</head>
+<style>
+        table {
+            width: 100%;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        th{
+            background-color: #4a4aee;
+        }
+        td{
+            background-color: red;
+            color: white;
+        }
+</style>
+<body>
+    <h1>Product Catalog</h1>
+    <table border="1" cellpadding="3" cellspacing="5">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Laptop</td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYWwJbKCdAOxvCMpxHUPMsdWIEaSy2i4GN9A&s" alt="Laptop"></td>
+                <td>40000</td>
+                <td>High-performance laptop with 16GB RAM.</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td colspan="6" align="center">Free shipping available</td>
+            </tr>
+            <tr>
+                <td>Headphones</td>
+                <td><img src="https://static.vecteezy.com/system/resources/thumbnails/017/054/098/small/headphones-design-3d-rendering-for-product-mockup-png.png" alt="Headphones"></td>
+                <td>1500</td>
+                <td>Noise-cancelling over-ear headphones.</td>
+                <td>Out of Stock</td>
+            </tr>
+            <tr>
+                <td>Smartphone</td>
+                <td><img src="https://images.jdmagicbox.com/quickquotes/images_main/iphone-13-pro-512-gb-alpine-green-270849873-srlj19dl.jpg" alt="Smartphone"></td>
+                <td>1,24,249</td>
+                <td>iphone 13pro Latest Smartphone</td>
+                <td>In Stock</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
