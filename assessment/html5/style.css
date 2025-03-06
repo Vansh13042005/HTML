@@ -1,0 +1,46 @@
+
+
+h3{
+    text-align: center;
+    color: brown;
+    text-decoration: underline;
+}
+.main
+{
+    background-color:bisque;
+    padding: 5px;
+}
+.row {
+    display: flex;
+    margin: 7px;
+
+}
+
+
+.row div input {
+    width: 350px;
+    padding: 5px;
+}
+
+
+.row div textarea {
+    width: 350px;
+    padding: 5px;
+}
+
+.row .lab {
+    width: 200px;
+}
+
+.row .radio input {
+    width: 16px;
+}
+
+.row .check input {
+    width: 16px;
+}
+
+.row .submit input {
+    width: 100px;
+    background-color: green;
+}

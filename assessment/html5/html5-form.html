@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Student Registration form</h3>
+    <div class="main">
+        <form action="">
+            <div class="row">
+                <div class="lab">first Name :</div>
+                <div><input type="text" placeholder="Enter the firstname" required pattern="[A-Za-z]{3,6}"></div>
+            </div>
+            <div class="row">
+                <div class="lab">Last name:</div>
+                <div><input type="text" placeholder="Enter the lastname" required></div>
+            </div>
+            <div class="row">
+                <div class="lab">Email:</div>
+                <div><input type="email" placeholder="Enter email" required></div>
+            </div>
+            <div class="row">
+                <div class="lab">Mobile:</div>
+                <div class="div"><input type="text" placeholder="only digit 10 enter" required pattern="[0-9]{10}" title="10 Digits only"></div>
+            </div>
+            <div class="row">
+                <div class="lab">Gender:</div>
+                <div class="radio"><input type="radio" name="gen">Male <input type="radio" name="gen">Female</div>
+            </div>
+            <div class="row">
+                <div class="lab">Birth of date:</div>
+                <div><input type="date" required></div>
+            </div>
+            <div class="row">
+                <div class="lab">Address:</div>
+                <div><textarea name="" id="" rows="8" required></textarea></div>
+            </div>
+            <div class="row">
+                <div class="lab">City:</div>
+                <div><input type="text" required></div>
+            </div>
+            <div class="row">
+                <div class="lab">Area Pin:</div>
+                <div><input type="text" required></div>
+            </div>
+            <div class="row">
+
+                <div class="lab">State:</div>
+                <div><input type="text" required></div>
+
+            </div>
+            <div class="row">
+
+                <div class="lab">Qualifications:</div>
+                <div><select name="" id="" >
+                    <option hidden>select qualificaton:</option>
+                        <option value="">gruduction</option>
+                        <option value="">12</option>
+                        <option value="">10</option>
+                    </select></div>
+            </div>
+            <div class="row">
+                <div class="lab">specialization:</div>
+                <div class="check">
+                    <input type="checkbox">computer science <br>
+                    <input type="checkbox">Information tecnology <br>
+                    <input type="checkbox">computer science <br>
+                    <input type="checkbox">Tele communication <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lab">Password:</div>
+                <div><input type="password" placeholder="enter the password"    required></div>
+            </div>
+            <div class="row">
+                <div class="submit"><input type="submit" value="Registered"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
