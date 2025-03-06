@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+}
+
+#form {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    width: 300px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 106%;
+}
+
+#button:hover {
+    background-color: #0056b3;
+}
+    </style>
 </head>
 <body>
-    
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="input" required pattern="[a-zA-Z]{2,5}"
+        title="min 2 and max 5 Letters only...!">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="input" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" class="input" required></textarea>
+
+        <button type="submit" id="button">Submit</button>
+        
+    </form>
 </body>
 </html>
