@@ -11,14 +11,25 @@
         // for(i=1;i<=10;i++){
         //     console.log(i)
         // }
+
         /*while loop*/
-        let sum = 0;
-        let i = 2; 
-        while (i <= 10) {
-            sum += i; 
-            i += 2;   
-        }
-        console.log("Sum of even numbers from 1 to 10 is:", sum);
+        // let sum = 0;
+        // let i = 2; 
+        // while (i <= 10) {
+        //     sum += i; 
+        //     i += 2;   
+        // }
+        // console.log("Sum of even numbers from 1 to 10 is:", sum);
+        
+        /*do-while loop */
+
+        let number;
+        do {
+        number = parseInt(prompt("Enter a number greater than 10:"));
+        } while (number <= 10);
+
+        alert("You entered: " + number);
+
 
     </script>
 </body>
