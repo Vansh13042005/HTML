@@ -5,12 +5,12 @@ export default function TaskComponent() {
   const [inputValue, setInputValue] = useState('');
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div>
       <h2>{clicked ? "Clicked!" : "Not Clicked"}</h2>
       <button onClick={() => setClicked(true)}>Click Me</button>
 
       <hr />
-    
+
       <input
         type="text"
         placeholder="Type something..."
