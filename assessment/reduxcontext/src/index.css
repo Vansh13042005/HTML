@@ -1,0 +1,25 @@
+/* styles.css */
+.container {
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #1e1e2f;
+  color: white;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
