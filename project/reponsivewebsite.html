@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Big Responsive Website</title>
+  <title>Modern UI Website</title>
   <style>
-    /* Reset */
+    /* Reset & Font */
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +13,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
   line-height: 1.6;
-  color: #333;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -26,19 +28,30 @@ body {
 
 /* Header */
 header {
-  background: #111;
-  color: white;
-  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo span {
+  color: #00ffff;
 }
 
 .nav-links {
@@ -48,138 +61,133 @@ header {
 }
 
 .nav-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffff;
 }
 
 /* Hero */
 .hero {
-  background: #444;
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.hero .btn {
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* About */
-.about, .services, .projects, .contact, .testimonials {
-  padding: 60px 0;
-  text-align: center;
-}
-
-/* Services */
-.service-grid {
+  height: 100vh;
   display: flex;
-  gap: 20px;
-  margin-top: 30px;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
 }
 
-.service-box {
-  background: #f4f4f4;
-  padding: 20px;
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 span {
+  color: #00ffff;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #00ffff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Glass Sections */
+.glass-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin: 40px 20px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
 /* Projects */
 .project-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
   margin-top: 30px;
-  justify-content: center;
+  padding: 0 20px;
 }
 
-.project-card {
-  background: #ddd;
-  padding: 40px;
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-}
-
-/* Testimonials */
-.testimonial-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  justify-content: center;
-}
-
-.testimonial {
-  background: #eee;
+.card {
+  background: rgba(255, 255, 255, 0.05);
   padding: 30px;
-  max-width: 300px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* Contact */
-.contact form {
+form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 500px;
   margin: auto;
+  margin-top: 20px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.contact button {
-  padding: 10px;
-  background: black;
-  color: white;
+input, textarea {
+  padding: 12px;
   border: none;
-  cursor: pointer;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
 }
 
 /* Footer */
 footer {
-  background: #111;
-  color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, 0.05);
+  margin-top: 40px;
+  font-size: 0.9rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
   .nav-links {
     flex-direction: column;
-    text-align: center;
     gap: 10px;
   }
 
-  .service-grid, .project-grid, .testimonial-grid {
+  .nav {
     flex-direction: column;
   }
 }
 
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
+
+  <header class="glass-header">
     <div class="container nav">
-      <h1 class="logo">MyBrand</h1>
+      <h1 class="logo">Vansh<span>Dev</span></h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -187,86 +195,47 @@ footer {
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div class="container">
-      <h2>Welcome to My Website</h2>
-      <p>I create beautiful, responsive websites that solve real problems.</p>
-      <a href="#contact" class="btn">Hire Me</a>
+  <section class="hero" id="hero">
+    <div class="container center">
+      <h2>Hello, I'm <span>Vansh</span></h2>
+      <p>I build sleek websites and modern user interfaces.</p>
+      <a href="#contact" class="btn">Let's Talk</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="container">
+  <section class="about glass-section" id="about">
+    <div class="container center">
       <h2>About Me</h2>
-      <p>I’m a frontend developer skilled in HTML, CSS, JavaScript, and React. I love designing responsive and user-friendly web apps.</p>
+      <p>I am a frontend developer specializing in React.js and UI design. I love creating beautiful and responsive user experiences.</p>
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="services" id="services">
-    <div class="container">
-      <h2>My Services</h2>
-      <div class="service-grid">
-        <div class="service-box">
-          <h3>Web Design</h3>
-          <p>Modern, clean UI design for your websites.</p>
-        </div>
-        <div class="service-box">
-          <h3>Web Development</h3>
-          <p>Responsive and functional websites built with HTML, CSS & JS.</p>
-        </div>
-        <div class="service-box">
-          <h3>React Apps</h3>
-          <p>Interactive single-page applications using React.js</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
   <section class="projects" id="projects">
-    <div class="container">
+    <div class="container center">
       <h2>Projects</h2>
       <div class="project-grid">
-        <div class="project-card">Project 1</div>
-        <div class="project-card">Project 2</div>
-        <div class="project-card">Project 3</div>
+        <div class="card glass">Portfolio Website</div>
+        <div class="card glass">React To-Do App</div>
+        <div class="card glass">E-commerce UI</div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <div class="container">
-      <h2>Testimonials</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial">"Amazing work!" - Client A</div>
-        <div class="testimonial">"Very professional." - Client B</div>
-        <div class="testimonial">"Delivered on time." - Client C</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
+  <section class="contact glass-section" id="contact">
+    <div class="container center">
+      <h2>Contact</h2>
       <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 MyBrand. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 VanshDev | All rights reserved</p>
   </footer>
+
 </body>
 </html>
