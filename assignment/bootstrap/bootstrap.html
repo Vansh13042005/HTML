@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date Interval</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap DateTimePicker CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      padding: 40px;
+    }
+    .result-box {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #3498db;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h3>Date Interval</h3>
+  
+  <div class="form-inline">
+    <label>From: </label>
+    <div class="form-group">
+      <div class="input-group date" id="fromDate">
+        <input type="text" class="form-control" />
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+
+    <label>To: </label>
+    <div class="form-group">
+      <div class="input-group date" id="toDate">
+        <input type="text" class="form-control" />
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="calculateInterval()">Execute</button>
+  </div>
+
+  <!-- Result Output -->
+  <div id="result" class="result-box" style="display:none;"></div>
+</div>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+<script>
+  // Initialize datetime pickers
+  $('#fromDate').datetimepicker({
+    format: 'MM/DD/YYYY'
+  });
+  $('#toDate').datetimepicker({
+    format: 'MM/DD/YYYY',
+    useCurrent: false // prevents automatic selection
+  });
+
+  // Link the two pickers: fromDate should be before toDate
+  $("#fromDate").on("dp.change", function (e) {
+    $('#toDate').data("DateTimePicker").minDate(e.date);
+  });
+  $("#toDate").on("dp.change", function (e) {
+    $('#fromDate').data("DateTimePicker").maxDate(e.date);
+  });
+
+  // Main function to calculate interval
+  function calculateInterval() {
+    // Fetch input values
+    const from = $('#fromDate input').val();
+    const to = $('#toDate input').val();
+
+    if (!from || !to) {
+      alert('Please select both dates.');
+      return;
+    }
+
+    // Parse using moment.js
+    const start = moment(from, 'MM/DD/YYYY');
+    const end = moment(to, 'MM/DD/YYYY');
+
+    // Calculate the difference
+    const years = end.diff(start, 'years');
+    const months = end.diff(start, 'months');
+    const weeks = end.diff(start, 'weeks');
+    const days = end.diff(start, 'days');
+
+    // Display result
+    $('#result').html(
+      `Date interval between <strong>${from}</strong> and <strong>${to}</strong><br><br>
+       In years: ${years}<br>
+       In months: ${months}<br>
+       In weeks: ${weeks}<br>
+       In days: ${days}`
+    ).show();
+
+    // Console output for debugging
+    console.log("Date Interval Calculation:");
+    console.log(`From: ${from}, To: ${to}`);
+    console.log(`Years: ${years}, Months: ${months}, Weeks: ${weeks}, Days: ${days}`);
+  }
+</script>
+</body>
+</html>
